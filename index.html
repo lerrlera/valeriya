@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <!-- Header -->
+     <nav class="header">
+        <a href="visualizations.html" class="nav-link">Visualizations</a>
+     </nav>
       <!-- Banner / Hero -->
       <section id="banner" aria-labelledby="banner-title">
         <div class="container">
@@ -176,6 +181,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal (for image view). Source: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+     <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="main.js" defer></script>
+
   </body>
 </html>
 
