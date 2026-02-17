@@ -44,23 +44,111 @@ p {
   margin: 0!important;
 }
 
-/* Header */
-.header {
-  padding: 2% 2% 0;
-  display: flex;
-  justify-content: flex-end;
+/* Ensure the hidden attribute always hides */
+[hidden] { display: none !important; }
+
+/* Header base */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--slight-stroke);
 }
 
-.nav-link {
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Logo image */
+.logo { display: inline-flex; align-items: center; }
+.logo img { height: 52px; width: auto; display: block; }
+
+/* Desktop nav */
+.nav { display: flex; align-items: center; gap: 18px; }
+
+.nav a {
   text-decoration: none;
   color: var(--color-font);
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
-.nav-link:hover {
+.nav a:hover,
+.nav a:focus-visible {
   color: var(--color-accent);
+  outline: none;
 }
 
-/* Banner Section */
+/* Hamburger button */
+.menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: block; 
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after  { top:  7px; }
+
+/* Mobile menu */
+.mobile-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--color-font);
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.04);
+}
+
+#main {
+  padding-inline: clamp(16px, 5vw, 48px);
+}
+
+/* Main Banner Section */
 .container {
   padding: 10% 7% 0 7%;
   margin: 0 auto;
@@ -73,6 +161,8 @@ p {
 .lead {
   max-width: 80%;
 }
+
+
 /* Links */
 .text-link {
   color: var(--color-accent);
@@ -370,21 +460,23 @@ p {
 /* Vis page */
 
 #chart {
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
 }
 
 .main-heading {
-  padding: 2% 2%;
+  padding: 4rem 5rem;
  
 }
 
 .chip-heading {
+  display: inline-flex;
+  width: fit-content;
   background-color: var(--color-text-secondary);
-  display: inline-block;
-  padding: 1% 1%;
-  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;  
   color: var(--color-bg);
 }
+
 
 .svg-grid {
   display: flex;

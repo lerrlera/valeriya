@@ -1,0 +1,30 @@
+.main {
+  width: min(800px, 95vw);  /* same width as charts */
+  margin: 0 auto;           /* center the whole column */
+  display: flex;
+  flex-direction: column;
+}
+
+.vis-container {
+  width: 100%;              /* fill .main */
+}
+
+#view,
+#view2,
+#view3,
+#view4,
+#view5,
+#view6,
+#view7,
+#view8 {
+  width: 100%;
+  height: auto;
+  max-width: none;          /* not needed anymore */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.headline {
+  text-align: left;
+  padding: 4rem 0 2rem 0;
+}

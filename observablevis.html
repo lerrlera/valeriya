@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observable Visualizations</title>
+
+    <!-- VL Script -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/observablevis.css" />
+
+    <!-- VL Scripts -->
+     <script>
+      const options = {
+        config: {
+          // Vega-Lite default configuration
+        },
+        init: (view) => {
+          // initialize tooltip handler
+          view.tooltip(new vegaTooltip.Handler().call);
+        },
+        view: {
+          // view constructor options
+          // remove the loader if you don't want to default to vega-datasets!
+          loader: vega.loader({
+            baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+          }),
+          renderer: "canvas",
+        },
+      };
+
+      // register vega and vega-lite with the API
+      vl.register(vega, vegaLite, options);
+    </script>
+</head>
+<body>
+    <!-- Header -->
+     <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="/" aria-label="Home">
+                <img src="assets/img/star.svg" alt="Valeriya Ten" />
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+            <a href="visualizations.html">SVG Vis</a>
+            <a href="observablevis.html">Observable Vis</a>
+            </nav>
+
+            <button
+            class="menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            >
+            <span class="hamburger" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile" hidden>
+            <a href="visualizations.html">SVG Vis</a>
+            <a href="observablevis.html">Observable Vis</a>
+        </nav>
+     </header>
+    
+
+    <div class="main">
+        <h1 class="headline">Vega-Lite Intro - 4 Visual Explorations</h1>
+      
+        
+        <div class="vis-container">
+        <!-- visualization goes into this div you can create multiple divs and give them IDs -->
+            <h3 class="chip-heading">Visualization 1: Global Sales by Genre and Platform</h3>  
+            <p>Q1: How much total sales have the Simulation game genre achieved across all platforms?</p>
+            <div id="view"></div>
+            <p>Q2: Which platform-genre combinations generate the highest total global sales?</p>
+            <div id="view2"></div>
+            <h3 class="chip-heading">Visualization 2: Sales Over Time by Platform and Genre</h3>  
+            <p>Q1: How have total global sales for Action, Sports, and Simulation games changed over time?</p>
+            <div id="view3"></div>
+            <p>Q2: How do sales trends for the Action genre differ between PlayStation 2 and Xbox 360 over time?</p>
+            <div id="view4"></div>
+            <h3 class="chip-heading">Visualization 3: Regional Sales vs. Platform</h3>  
+            <p>Q1: Which platforms generate the highest total sales in North America, Europe, Japan, and other regions?</p>
+            <div id="view5"></div>
+            <p>Q2: How does platform popularity differ between the North American and Japanese markets?</p>
+            <div id="view6"></div>
+            <h3 class="chip-heading">Visualization 4: Tell Us a Visual Story</h3>  
+            <p>Q1: How Simulation, Role-Playing, and Sports genres perform across different regions?</p>
+            <div id="view7"></div>
+            <p>Q2: How have annual sales trends for Nintendo, Electronic Arts, and Ubisoft differed between Japan and North America since 2000?</p>
+            <div id="view8"></div>
+          </div>
+
+    </div>
+    <!-- JS -->
+    <script src="vis2.js"></script>
+
+</body>
+</html>

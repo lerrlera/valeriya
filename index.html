@@ -15,15 +15,39 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-
     <!-- Header -->
-     <nav class="header">
-        <a href="visualizations.html" class="nav-link">Visualizations</a>
-     </nav>
-      <!-- Banner / Hero -->
+     <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="/" aria-label="Home">
+                <img src="assets/img/star.svg" alt="Valeriya Ten" />
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+            <a href="visualizations.html">SVG Vis</a>
+            <a href="observablevis.html">Observable Vis</a>
+            </nav>
+
+            <button
+            class="menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            >
+            <span class="hamburger" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile" hidden>
+            <a href="visualizations.html">SVG Vis</a>
+            <a href="observablevis.html">Observable Vis</a>
+        </nav>
+     </header>
+
+    <!-- Banner / Hero -->
       <section id="banner" aria-labelledby="banner-title">
         <div class="container">
           <h1 id="banner-title">
@@ -126,16 +150,16 @@
                     </a>
                     <div class="gallery-item">
                         <img src="assets/img/bmo.png" alt="">
-                        <div class="caption">e-Learning: Becoming a CCMD (UX/Visual Design)</div>
+                        <div class="caption">BMO Time (Game Design & Development)</div>
                     </div>
                     
                     <div class="gallery-item">
                         <img src="assets/img/cpd-thumb.png" alt="">
-                        <div class="caption">Symbolic Kit (Interaction Design)</div>
+                        <div class="caption">eLearning Course (Web Design)</div>
                     </div>
                       <div class="gallery-item">
                         <img src="assets/img/sesh.png" alt="">
-                        <div class="caption">Symbolic Kit (Interaction Design)</div>
+                        <div class="caption">Sesshōmaru (Drawing)</div>
                     </div>
             </div>
     </main>

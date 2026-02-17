@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizations</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-     <!-- Header -->
-     <nav class="header">
-        <a href="index.html" class="nav-link">Portoflio</a>
-     </nav>
-    <h1 class="main-heading">Visualizations</h1>
+    <!-- Header  -->
+    <!-- Header -->
+     <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="/" aria-label="Home">
+                <img src="assets/img/star.svg" alt="Valeriya Ten" />
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+            <a href="visualizations.html">SVG Vis</a>
+            <a href="observablevis.html">Observable Vis</a>
+            </nav>
+
+            <button
+            class="menu-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            >
+            <span class="hamburger" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile" hidden>
+            <a href="visualizations.html">SVG Vis</a>
+            <a href="observablevis.html">Observable Vis</a>
+        </nav>
+     </header>
+     <h1 class="main-heading">Assignment 2: SVG Visualizations</h1>
+
     <div class="svg-grid">
         <section id="chart">
             <h3 class="chip-heading">Bar Chart (my ₊˚⊹ ᰔ productiveness during the week in %)</h3>
@@ -26,6 +52,7 @@
     </div>
     <!-- JS -->
     <script src="vis.js"></script>
+
     
 </body>
 </html>
