@@ -5,7 +5,6 @@ async function fetchData() {
 }
 
 fetchData().then((videoGamesData) => {
-
   // VISUALIZATION 1
   // Q1
   const simulationGames = videoGamesData.filter(
