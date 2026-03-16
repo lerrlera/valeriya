@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D3 Animation</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/observablevis.css" />
+        <link rel="stylesheet" href="css/circle.css" />
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="logo" href="/" aria-label="Home">
+                    <img src="assets/img/star.svg" alt="Valeriya Ten" />
+                </a>
+
+                <nav class="nav" aria-label="Primary">
+                <a href="visualizations.html">SVG Vis</a>
+                <a href="observablevis.html">Observable Vis</a>
+                </nav>
+
+                <button
+                class="menu-btn"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                >
+                <span class="hamburger" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile" hidden>
+                <a href="visualizations.html">SVG Vis</a>
+                <a href="observablevis.html">Observable Vis</a>
+            </nav>
+        </header>
+    
+
+        <h2 class="section-header">D3 Random Circle Animation</h2>
+        <div id="canvas"></div>
+        <script type="module" src="circleanimation.js"></script>
+    </body>
+</html>
